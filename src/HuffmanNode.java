@@ -34,6 +34,7 @@ public class HuffmanNode implements Comparable<HuffmanNode> {
         return this.left;
     }
     
+    //Overriding compareTo allows the priority queue to compare objects based on probability
     @Override
     public int compareTo(HuffmanNode node) {
         if (this.probability == node.getProbability()) {
@@ -45,6 +46,7 @@ public class HuffmanNode implements Comparable<HuffmanNode> {
         }
     }
     
+    //Mainly used for debugging purposes
     @Override
     public String toString() {
         return "Symbol: " + this.symbol + " Frequency: " + this.probability; 
